@@ -257,6 +257,7 @@ public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements
 					afterSingletonCreation(beanName);
 				}
 				if (newSingleton) {
+					//完成单例对象的最后注册，此时对象已经完成初始化
 					addSingleton(beanName, singletonObject);
 				}
 			}
